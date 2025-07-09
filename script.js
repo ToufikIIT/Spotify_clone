@@ -208,10 +208,10 @@ async function getSongs(folder) {
     }
 
     // Attach an event listener to each song
-    Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(e => {
+    Array.from(document.querySelector(".songlist").getElementsByTagName("li")).forEach(e => {
         e.addEventListener("click", element => {
-            playMusic(e.querySelector(".info").firstElementChild.innerHTML.trim())
-
+            console.log(e.querySelector(".info").firstElementChild.innerHTML)
+            playmusic(e.querySelector(".info").firstElementChild.innerHTML.trim())
         })
     })
 
